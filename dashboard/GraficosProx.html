@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROXMOOV | GRÁFICOS</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="styleDash.css">
+</head>
+
+<body style="display: flex;">
+
+    <!--header começo-->
+    <header>
+        <div class="left">
+            <h3><a href="dashboard.html">PROX<span>MOOV</span></a></h3>
+        </div>
+        <div class="right">
+            <a href="../login.html" class="sair_btn">Sair</a>
+        </div>
+    </header>
+    <!--header final-->
+    <!--sidebar começo-->
+    <div class="sidebar">
+        <center>
+            <img src="image/cucas.jpg" class="image" alt="">
+            <h2>Lucas</h2>
+        </center>
+        <a href="dashboard.html">
+            <ion-icon name="browsers-outline"></ion-icon><span> Inicio</span>
+        </a>
+        <a href="#" class="sidebar2">
+            <ion-icon name="bar-chart-outline"></ion-icon><span> Painel de Gráficos</span>
+        </a>
+        <a href="#">
+            <ion-icon name="thermometer-outline"></ion-icon>
+            <span> Mapa de calor</span>
+        </a>
+        <a href="infoImportante.html">
+            <ion-icon name="information-circle-outline"></ion-icon><span> Informações importantes</span>
+        </a>
+        <a href="infoUsuario.html">
+            <ion-icon name="person-circle-outline"></ion-icon><span> Minhas informações</span>
+        </a>
+        <a href="FAQ.html">
+            <ion-icon name="help-outline"></ion-icon><span> FAQ</span>
+        </a>
+        <a href="https://proxmoove.tomticket.com/?account=3669056P19052022122020" target="_blank">
+            <ion-icon name="people-circle-outline"></ion-icon>
+            <span> Suporte</span>
+        </a>
+    </div>
+    <!--sidebar final-->
+    <div class="content2">
+        <div class="nome1">
+            <h2>CLIENTES TOTAIS</h2>
+        </div>
+        <br>
+        <div id="chartSemana">
+            <canvas id="myChart2" style="position: relative; height:50vh; width:80vw"></canvas>
+        </div>
+        <br>
+        <div class="nome1">
+            <h2>CLIENTES POR ÁREA</h2>
+        </div>
+        <br>
+        <div id="chartCompara">
+            <canvas id="myChart3" style="position: relative; height:60vh; width:80vw;"></canvas>
+        </div>
+        <div style="color: rgb(158, 30, 94);"></div>
+    </div>
+</body>
+
+<script>
+    const labels2 = [
+        'Segunda-Feira',
+        'Terça-Feira',
+        'Quarta-Feira',
+        'Quinta-Feira',
+        'Sexta-Feira',
+        'Sábado',
+        'Domingo',
+    ];
+
+    const labels3 = [
+        'Caixa',
+        'Bebidas',
+        'Mercearia',
+        'Limpeza e Higiene',
+    ];
+
+
+    const data2 = {
+        labels: labels2,
+        datasets: [{
+            label: 'Número total de clientes',
+            backgroundColor: 'rgb(40, 40, 102)',
+            borderColor: 'rgb(40, 40, 102)',
+            data: [40, 42, 44, 50, 57, 38, 29],
+        },]
+    };
+    const data3 = {
+        labels: labels3,
+        datasets: [{
+            label: 'Segunda-Feira',
+            backgroundColor: 'rgb(31, 184, 113)',
+            borderColor: 'rgb(31, 184, 113)',
+            data: [38, 14, 30, 8],
+        },
+        {
+            label: 'Terça-Feira',
+            backgroundColor: 'rgb(31, 184, 151)',
+            borderColor: 'rgb(31, 184, 151)',
+            data: [40, 17, 35, 14],
+        },
+        {
+            label: 'Quarta-Feira',
+            backgroundColor: 'rgb(154, 206, 206)',
+            borderColor: 'rgb(154, 206, 206)',
+            data: [42, 19, 33, 18],
+        },
+        {
+            label: 'Quinta-Feira',
+            backgroundColor: 'rgb(25, 192, 184)',
+            borderColor: 'rgb(25, 192, 184)',
+            data: [48, 22, 40, 22],
+        },
+        {
+            label: 'Sexta-Feira',
+            backgroundColor: 'rgb(97, 39, 163)',
+            borderColor: 'rgb(97, 39, 163)',
+            data: [55, 24, 44, 23],
+        },
+        {
+            label: 'Sábado',
+            backgroundColor: 'rgb(163, 39, 163)',
+            borderColor: 'rgb(163, 39, 163)',
+            data: [30, 10, 22, 6],
+        },
+        {
+            label: 'Domingo',
+            backgroundColor: 'rgb(158, 30, 94)',
+            borderColor: 'rgb(158, 30, 94)',
+            data: [22, 8, 17, 8],
+        },]
+    };
+
+    const config2 = {
+        type: 'bar',
+        data: data2,
+        options: {}
+    };
+    const config3 = {
+        type: 'bar',
+        data: data3,
+        options: {}
+    };
+</script>
+<script>
+    const myChart2 = new Chart(
+        document.getElementById('myChart2'),
+        config2
+    );
+    const myChart3 = new Chart(
+        document.getElementById('myChart3'),
+        config3
+    );
+</script>
+
+</html>
