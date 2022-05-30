@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROXMOOV | DASHBOARD</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styleDash2.css">
+</head>
+
+<body>
+    <!--header começo-->
+    <header>
+        <div class="left">
+            <h3><a href="dashboardInicio.html">PROX<span>MOOV</span></a></h3>
+        </div>
+        <div class="right">
+            <a href="../login.html" class="sair_btn">Sair</a>
+        </div>
+    </header>
+    <!--header final-->
+    <!--sidebar começo-->
+    <div class="sidebar">
+        <center>
+            <img src="image/cucas.jpg" class="image" alt="" hidden>
+            <h2>Lucas</h2>
+        </center>
+        <a href="#"  class="sidebar2">
+            <ion-icon name="browsers-outline"></ion-icon><span> Inicio</span>
+        </a>
+        <a href="dashboard.html">
+            <ion-icon name="bar-chart-outline"></ion-icon><span> Painel de Gráficos</span>
+        </a>
+        <a href="HeatMap.html">
+            <ion-icon name="thermometer-outline"></ion-icon>
+            <span> Mapa de calor</span>
+        </a>
+        <a href="infoImportante.html">
+            <ion-icon name="information-circle-outline"></ion-icon><span> Informações importantes</span>
+        </a>
+        <a href="infoUsuario.html">
+            <ion-icon name="person-circle-outline"></ion-icon><span> Minhas informações</span>
+        </a>
+        <a href="FAQ2.html">
+            <ion-icon name="help-outline"></ion-icon><span> FAQ</span>
+        </a>
+
+        <a href="https://proxmoove.tomticket.com/?account=3669056P19052022122020" target="_blank">
+            <ion-icon name="people-circle-outline"></ion-icon>
+            <span> Suporte</span>
+        </a>
+    </div>
+    <!--sidebar final-->
+    <div class="content">
+
+        <div class="pai">
+            <div class="grow2">
+                <form action="infoImportante.html"><button class="aoba" id="aoba"></form>
+                <p class="aae1">Mercado Carrefour <br><br> Avenida Aricanduva, 4350 - Vila California, São Paulo - SP,
+                    03490-000</p> </button>
+            </div>
+            <div class="grow2">
+                <form action="infoImportante.html"><button class="aoba2" id="aoba2"> </form>
+                <p class="aae2">Mercado Carrefour <br><br> Av. Mutinga, 1300 - Vila Pirituba, São Paulo - SP, 05134-220
+                </p> </button>
+            </div>
+        </div>
+    </div>
+    <div class="pai2">
+        <div class="grow2">
+            <form action="infoImportante2.html"><button class="aoba" id="aoba3"></form>
+            <p class="aae3">Mercado Carrefour <br><br> Av. Pres. Kenedy, 635 - Jardim Remanso, Diadema - SP, 09910-550
+            </p> </button>
+        </div>
+        <div class="grow2">
+            <form action="infoImportante2.html"> <button class="aoba2" id="aoba4"></form>
+            <p class="aae4">Mercado Carrefour <br><br> Av. Dom Pedro I, 2131 - Jardim Belmar, Guarujá - SP, 11440-002
+            </p> </button>
+        </div>
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
+<script>
+    function bba(params) {
+     pri = document.getElementById('aoba');
+             pri.classList.toggle('grow');
+             sec = document.getElementById('aoba2');
+             sec.classList.toggle('fade');
+             forr = document.getElementById('aoba3');
+             forr.classList.toggle('fade');
+             aaa = document.getElementById('aoba4');
+             aaa.classList.toggle('fade');
+     
+    }
+    setInterval(bba, 1000)
+ 
+ </script>
+

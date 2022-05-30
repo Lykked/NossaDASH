@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROXMOOV | DASHBOARD</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styleDash2.css">
+</head>
+<link rel="stylesheet" href="demo/css.css">
+
+<body style="position: fixed;">
+    <!--header começo-->
+    <header>
+        <div class="left">
+            <h3><a href="dashboardInicio.html">PROX<span>MOOV</span></a></h3>
+        </div>
+        <div class="right">
+            <a href="../login.html" class="sair_btn">Sair</a>
+        </div>
+    </header>
+    <!--header final-->
+    <!--sidebar começo-->
+    <div class="sidebar">
+        <center>
+            <img src="image/cucas.jpg" class="image" alt="" hidden>
+            <h2>Alguém ai</h2>
+        </center>
+        <a href="dashboardInicio.html"  >
+            <ion-icon name="browsers-outline"></ion-icon><span> Inicio</span>
+        </a>
+        <a href="dashboard.html">
+            <ion-icon name="bar-chart-outline"></ion-icon><span> Painel de Gráficos</span>
+        </a>
+        <a href="#" class="sidebar2">
+            <ion-icon name="thermometer-outline"></ion-icon>
+            <span> Mapa de calor</span>
+        </a>
+        <a href="infoImportante.html">
+            <ion-icon name="information-circle-outline"></ion-icon><span> Informações importantes</span>
+        </a>
+        <a href="infoUsuario.html">
+            <ion-icon name="person-circle-outline"></ion-icon><span> Minhas informações</span>
+        </a>
+        <a href="FAQ2.html">
+            <ion-icon name="help-outline"></ion-icon><span> FAQ</span>
+        </a>
+
+        <a href="https://proxmoove.tomticket.com/?account=3669056P19052022122020" target="_blank">
+            <ion-icon name="people-circle-outline"></ion-icon>
+            <span> Suporte</span>
+        </a>
+    </div>
+    <!--sidebar final-->
+    <div class="content">
+
+     
+    <p>
+        <div id="diva">
+            <div class="container">
+    
+                <div class="options">
+                    <input oninput="kk()" onchange="kk()" type="range" id="tink" class="iptRange" value="1" min="10" max="20"><br />
+                    <input oninput="kk2()" type="text" id="valor" value="100" style="display: none;"><br />
+                    <input type="range" id="blurr" value="19" min="10" max="50" style="display: none;">
+                  
+                </div>
+ 
+                <div class="mapa">
+    
+    <canvas id="canvas" width="900" height="600"></canvas>
+    <p id="budget">Horário : 09:00 - 10:00</p>
+  
+    <div class="heatext">
+        Teste nossa nova funcionalidade: mapa de calor!
+Tome conhecimento de quais áreas do seu supermercado estão vendendo mais produtos, e em qual ramo de vendas sua loja tem mais força de venda.
+A partir dessas informações em tempo real você poderá organizar promoções, para áreas que estiverem com baixo fluxo de pessoas e saber em qual hora do dia você vende mais.
+    </div>   
+</div>
+    
+            </div>
+        </div>
+        <script>
+    
+            function kk2() {
+    
+                var radius = get('valor');
+    
+                heat.radius(+radius.value);
+                frame = frame || window.requestAnimationFrame(draw);
+    
+                if (changeType > 11) {
+                    diva.style.display = 'none'
+                }
+            }
+    
+            function kk(params) {
+                if (document.getElementById("tink").value == 10) {
+                    document.getElementById("valor").value = 3;
+                    budget.innerHTML = "Horário : 09:00 - 10:00"
+    
+                    kk2() 
+                }
+                if (document.getElementById("tink").value == 11) {
+                    document.getElementById("valor").value = 6;
+                    budget.innerHTML = "Horário : 10:00 - 11:00"
+    
+                    kk2()
+                }
+                if (document.getElementById("tink").value == 12) {
+                    document.getElementById("valor").value = 7;
+                    budget.innerHTML = "Horário : 11:00 - 12:00"
+    
+                    kk2() 
+    
+                } 
+                if (document.getElementById("tink").value == 13) {
+                    document.getElementById("valor").value = 4;
+                    budget.innerHTML = "Horário : 12:00 - 13:00"
+    
+                    kk2() 
+    
+                }  
+                if (document.getElementById("tink").value == 14) {
+                    document.getElementById("valor").value = 10;
+                    budget.innerHTML = "Horário : 13:00 - 14:00"
+    
+                    kk2() 
+    
+                }  
+                if (document.getElementById("tink").value == 15) {
+                    document.getElementById("valor").value = 10;
+                    budget.innerHTML = "Horário : 14:00 - 15:00"
+    
+                    kk2() 
+    
+                }  
+                if (document.getElementById("tink").value == 16) {
+                    document.getElementById("valor").value = 8;
+                    budget.innerHTML = "Horário : 15:00 - 16:00"
+    
+                    kk2() 
+                }
+                if (document.getElementById("tink").value == 17) {
+                    document.getElementById("valor").value = 7;
+                    budget.innerHTML = "Horário : 16:00 - 17:00"
+    
+                    kk2() 
+                }
+                if (document.getElementById("tink").value == 18) {
+                    document.getElementById("valor").value = 10;
+                    budget.innerHTML = "Horário : 17:00 - 18:00"
+    
+                    kk2() 
+                }
+                if (document.getElementById("tink").value == 19) {
+                    document.getElementById("valor").value = 7;
+                    budget.innerHTML = "Horário : 18:00 - 19:00"
+    
+                    kk2() 
+                }
+                if (document.getElementById("tink").value == 20) {
+                    document.getElementById("valor").value = 4;
+                    budget.innerHTML = "Horário : 19:00 - 20:00"
+    
+                    kk2() 
+                }
+            }
+    
+        </script>
+    
+        <script src="simpleheat.js"></script>
+        <script src="demo/data.js"></script>
+        <script>
+    
+            window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    
+            function get(id) {
+                return document.getElementById(id);
+            }
+    
+            var heat = simpleheat('canvas').data(data2).max(15),
+                frame;
+               
+            function draw() {
+                console.time('draw');
+                heat.draw();
+                console.timeEnd('draw');
+                frame = null;
+            }
+    
+            draw();
+    
+            get('canvas').onclick = function (e) {
+                heat.add([e.layerX, e.layerY, 1]);
+                frame = frame || window.requestAnimationFrame(draw);
+            };
+    
+    
+    
+        </script>
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
