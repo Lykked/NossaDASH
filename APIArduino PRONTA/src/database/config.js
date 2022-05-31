@@ -22,7 +22,7 @@ var mySqlConfig = {
     host: "localhost",
     database: "Proxmoov",
     user: "root",
-    password: "42745575880",
+    password: "",
 };
 
 function executar(instrucao) {
